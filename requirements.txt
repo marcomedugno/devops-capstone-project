@@ -11,6 +11,9 @@ python-dotenv==0.20.0
 # Security
 Flask-Talisman==1.0.0
 
+# Cross-Origin Resource Sharing
+Flask-Cors==3.0.10
+
 # Runtime dependencies
 gunicorn==20.1.0
 honcho==1.1.0
