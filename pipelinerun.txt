@@ -1,0 +1,61 @@
+[clone : clone] + '[' false = true ']'
+[clone : clone] + '[' false = true ']'
+[clone : clone] + '[' false = true ']'
+[clone : clone] + CHECKOUT_DIR=/workspace/output/
+[clone : clone] + '[' true = true ']'
+[clone : clone] + cleandir
+[clone : clone] + '[' -d /workspace/output/ ']'
+[clone : clone] + rm -rf '/workspace/output//*'
+[clone : clone] + rm -rf '/workspace/output//.[!.]*'
+[clone : clone] + rm -rf '/workspace/output//..?*'
+[clone : clone] + test -z ''
+[clone : clone] + test -z ''
+[clone : clone] + test -z ''
+[clone : clone] + git config --global --add safe.directory /workspace/output
+[clone : clone] + /ko-app/git-init -url=https://github.com/marcomedugno/devops-capstone-project.git -revision=cd-pipeline -refspec= -path=/workspace/output/ -sslVerify=true -submodules=true -depth=1 -sparseCheckoutDirectories=
+[clone : clone] {"level":"info","ts":1722655824.1020503,"caller":"git/git.go:176","msg":"Successfully cloned https://github.com/marcomedugno/devops-capstone-project.git @ 4e89f98f21e649a24e5b4b9fc16f47d9d9b95cc4 (grafted, HEAD, origin/cd-pipeline) in path /workspace/output/"}
+[clone : clone] {"level":"info","ts":1722655824.2319846,"caller":"git/git.go:215","msg":"Successfully initialized and updated submodules in path /workspace/output/"}
+[clone : clone] + cd /workspace/output/
+[clone : clone] ++ git rev-parse HEAD
+[clone : clone] + RESULT_SHA=4e89f98f21e649a24e5b4b9fc16f47d9d9b95cc4
+[clone : clone] + EXIT_CODE=0
+[clone : clone] + '[' 0 '!=' 0 ']'
+[clone : clone] + printf %s 4e89f98f21e649a24e5b4b9fc16f47d9d9b95cc4
+[clone : clone] + printf %s https://github.com/marcomedugno/devops-capstone-project.git
+
+[init : remove] Removing all files from /workspace/source ...
+
+[echo : echo-message] Code has been cloned successfully!
+
+[lint : flake8] Collecting flake8
+[lint : flake8]   Downloading flake8-7.1.0-py2.py3-none-any.whl (57 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.6/57.6 kB 1.5 MB/s eta 0:00:00
+[lint : flake8] Collecting pycodestyle<2.13.0,>=2.12.0
+[lint : flake8]   Downloading pycodestyle-2.12.0-py2.py3-none-any.whl (31 kB)
+[lint : flake8] Collecting mccabe<0.8.0,>=0.7.0
+[lint : flake8]   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+[lint : flake8] Collecting pyflakes<3.3.0,>=3.2.0
+[lint : flake8]   Downloading pyflakes-3.2.0-py2.py3-none-any.whl (62 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.7/62.7 kB 11.4 MB/s eta 0:00:00
+[lint : flake8] Installing collected packages: pyflakes, pycodestyle, mccabe, flake8
+[lint : flake8] Successfully installed flake8-7.1.0 mccabe-0.7.0 pycodestyle-2.12.0 pyflakes-3.2.0
+[lint : flake8] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[lint : flake8] 
+[lint : flake8] [notice] A new release of pip is available: 23.0.1 -> 24.2
+[lint : flake8] [notice] To update, run: pip install --upgrade pip
+
+[tests : nosetests] ***** Installing dependencies *****
+[tests : nosetests] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+[tests : nosetests] Collecting pip
+[tests : nosetests]   Downloading pip-24.2-py3-none-any.whl (1.8 MB)
+[tests : nosetests]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 26.3 MB/s eta 0:00:00
+[tests : nosetests] Requirement already satisfied: wheel in /usr/local/lib/python3.9/site-packages (0.43.0)
+[tests : nosetests] Installing collected packages: pip
+[tests : nosetests]   Attempting uninstall: pip
+[tests : nosetests]     Found existing installation: pip 23.0.1
+[tests : nosetests]     Uninstalling pip-23.0.1:
+[tests : nosetests]       Successfully uninstalled pip-23.0.1
+[tests : nosetests] Successfully installed pip-24.2
+[tests : nosetests] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[tests : nosetests] ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+
